@@ -1,24 +1,22 @@
 package dev.robertjohnnorman.dissections
+package derivation
 
-import shapeless3.deriving.K1
-import shapeless3.deriving.*
+import data.Result
+import polynomials.bifunctors.Const_2
 
-import scala.compiletime.ops.*
 import cats.data.Const
 import cats.{Eval, Foldable, Id}
-import dev.robertjohnnorman.dissections.data.Result
-import dev.robertjohnnorman.dissections.polynomials.bifunctors.Const_2
 import higherkindness.droste.derivation.Derived
-import shapeless3.deriving.Const
-import shapeless3.deriving.{Continue, K1}
+import shapeless3.deriving.*
+
 import scala.compiletime.*
+import scala.compiletime.ops.*
 
 type DerivedDissectable[F[_]] = Derived[Dissectable[F]]
 
 object DerivedDissectable:
   type Or[F[_]] = Derived.Or[Dissectable[F]]
   inline def apply[F[_]]: Dissectable[F] =
-    import DerivedDissectable.given
     summonInline[DerivedDissectable[F]].instance
 
   //given [T]: DerivedDissectable[Const[T]] = Dissectable.const[T]

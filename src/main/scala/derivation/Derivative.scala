@@ -1,12 +1,13 @@
 package dev.robertjohnnorman.dissections
+package derivation
+
+import data.Result
+import polynomials.bifunctors.Const_2
 
 import cats.data.Const
 import cats.{Eval, Foldable, Id}
-import dev.robertjohnnorman.dissections.data.Result
-import dev.robertjohnnorman.dissections.polynomials.bifunctors.Const_2
 import higherkindness.droste.data.Fix
 import higherkindness.droste.derivation.Derived
-import shapeless3.deriving.K1
 import shapeless3.deriving.*
 import shapeless3.deriving.K1.LiftP
 
