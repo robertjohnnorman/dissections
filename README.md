@@ -1,6 +1,6 @@
 # Stack-Safe Recursion Schemes for Scala
 
-A (very much WIP) attempt to implement in Scala the ideas in Conor McBride's [Clowns and Jokers paper](https://personal.cis.strath.ac.uk/conor.mcbride/Dissect.pdf). 
+A (very much WIP) attempt to implement in Scala the concepts from Conor McBride's [Clowns and Jokers](https://personal.cis.strath.ac.uk/conor.mcbride/Dissect.pdf) paper. 
 
 Implemented in terms of [Droste](https://github.com/higherkindness/droste) primitives (effectively by replacing the hylomorphisms in Droste's kernel with [Dissectable-based](src/main/scala/Dissectable.scala) implementations).
 
