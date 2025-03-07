@@ -15,11 +15,11 @@ But in all seriousness, this project was for fun to try and understand these con
 ## What works
 
 - Core idea from paper of Dissectable Functors, and using the derivative polynomial bifunctors as the data-type in a stack-machine for stack-safe traversal of recursive data structures
-- Implementation of Droste kernel hylomorphism in terms of this stack-machine, with full-set of working recursion-schemes based on this definition
-- Using typeclass-derivation to perform, at compile-time, taking the derivative of a generic polynomrial functor (read: Recursive data type), and building a Dissectable typeclass instance for that type.
+- Implementation of Droste kernel hylomorphism in terms of this stack-machine, with [full-set of working recursion-schemes](src/main/scala/schemes/) based on this definition
+- Using typeclass-derivation to perform, at compile-time, taking the derivative of a generic polynomial functor (read: Recursive data type), and building a Dissectable typeclass instance for that type.
 
 
 ## What doesn't work (yet)
 
-- Deriving (either by implicit derivation, or by metaprogramming), the Generic form of a given fixed-point data-structure from it's non-fixed-point form (or even from any encoding other than the one the current Dissectable derivations are defined in term of (i.e. the [polynomial Functors](src/main/scala/polynomials/functors))))
+- Deriving (either by implicit derivation, or by metaprogramming), the Generic form of a given fixed-point data-structure from it's non-fixed-point form (or even from any encoding other than the one the current Dissectable derivations which are defined in terms of Cats [(Polynomial) Functors](src/main/scala/polynomials/functors/package.scala))
 - Anything else in [TODO.md](TODO.md)
