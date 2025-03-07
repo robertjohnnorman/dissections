@@ -14,7 +14,7 @@ But in all seriousness, this project was for fun to try and understand these con
 
 ## What works
 
-- Core idea from paper of Dissectable Functors, and using the derivative polynomial bifunctors as the data-type in a recursive stack-machine
+- Core idea from paper of Dissectable Functors, and using the derivative polynomial bifunctors as the data-type in a stack-machine for stack-safe traversal of recursive data structures
 - Implementation of Droste kernel hylomorphism in terms of this stack-machine, with full-set of working recursion-schemes based on this definition
 - Using typeclass-derivation to perform, at compile-time, taking the derivative of a generic polynomrial functor (read: Recursive data type), and building a Dissectable typeclass instance for that type.
 
