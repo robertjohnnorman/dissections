@@ -2,7 +2,7 @@
 
 A (very much WIP) attempt to implement in Scala the ideas in Conor McBride's [Clowns and Jokers paper](https://personal.cis.strath.ac.uk/conor.mcbride/Dissect.pdf). 
 
-Implemented in terms of [Droste](https://github.com/higherkindness/droste) primitives (effectively by replacing the hylomorphisms in Droste's kernel [Dissectable-based](src/main/scala/Dissectable.scala) implementations).
+Implemented in terms of [Droste](https://github.com/higherkindness/droste) primitives (effectively by replacing the hylomorphisms in Droste's kernel with [Dissectable-based](src/main/scala/Dissectable.scala) implementations).
 
 Heavily inspired/borrowed from [purescript-ssrs](https://github.com/purefunctor/purescript-ssrs) and [purescript-dissect](https://github.com/PureFunctor/purescript-dissect) as reference implementations.
 
