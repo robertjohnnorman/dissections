@@ -44,7 +44,7 @@ trait Dissectable[P[_]] extends Functor[P] { self =>
 }
 ```
 
-where [`Result`](src/main/scala/data/Result.scala) is either a fully 'mapped' (sub-)structure, or the current 'dissection' of the structure as given by the polynomial BiFunctor `Q[_, _]` coupled with a 'Joker' element that was removed from the position that the dissection provides [the one-hole context](http://strictlypositive.org/diff.pdf) for.
+where [`Result`](src/main/scala/data/Result.scala) is either a fully 'mapped' (sub-)structure, or the current 'dissection' of the structure as given by the polynomial Bifunctor `Q[_, _]` coupled with a 'Joker' element that was removed from the position that the dissection provides [the one-hole context](http://strictlypositive.org/diff.pdf) for.
 
 ```scala
 enum Result[C, J, P[_], Q[_, _]]:
@@ -74,3 +74,14 @@ Unfortunately, at time of writing I've not been able to work out how to avoid th
 - Deriving (either by implicit derivation, or by metaprogramming), the Generic form of a given fixed-point data-structure from it's non-fixed-point form (or even from any encoding other than the one the current Dissectable derivations which are defined in terms of Cats [(Polynomial) Functors](src/main/scala/polynomials/functors/package.scala))
 - Recovering 'Huet's Zipper' as a further `Zipper` type-class that extends the requirements of `Dissectable`.
 - Anything else in [TODO.md](TODO.md)
+
+## Credits
+
+Much of what I've learnt about this topic has been largely due to the excellent work of the following projects from which this one has benefited enormously as references:
+
+- droste (https://github.com/higherkindness/droste)
+- purescript-dissect (https://github.com/PureFunctor/purescript-dissect)
+- purescript-ssrs (https://github.com/PureFunctor/purescript-ssrs)
+
+And of course the original papers from Conor McBride: http://strictlypositive.org/
+
