@@ -1,11 +1,12 @@
 package dev.robertjohnnorman.dissections
+package derivation
 
-import polynomials.all.*
 import data.all.*
+import polynomials.all.*
 
 import cats.data.{EitherK, Tuple2K}
 
-private[dissections] object DissectOps {
+private[dissections] object Dissect {
 
   def mindp[C, J, P[_], R[_]](
     using pDissect: Dissectable[P],

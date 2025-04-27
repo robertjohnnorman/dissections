@@ -1,14 +1,13 @@
 package dev.robertjohnnorman.dissections
 
+import data.all.*
+import derivation.Dissect.*
+import polynomials.all.*
+
 import cats.implicits.*
 import cats.syntax.*
 import cats.{Bifunctor, Foldable, Functor, Id, Traverse, ~>}
-import data.all.*
-import polynomials.all.*
-
 import cats.data.{Const, EitherK, Nested, Tuple2K}
-import dev.robertjohnnorman
-import dev.robertjohnnorman.dissections
 
 import scala.annotation.tailrec
 import scala.compiletime.summonInline
@@ -36,7 +35,6 @@ trait Dissectable[P[_]] extends Functor[P] { self =>
 
 object Dissectable:
 
-  import DissectOps.*
 
   @inline def apply[P[_]](using instance: Dissectable[P]): Dissectable[P] = instance
 
