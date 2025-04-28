@@ -54,7 +54,7 @@ enum Result[C, J, P[_], Q[_, _]]:
 
 > **_NOTE:_** Our definitions here do not constrain `Q` to be a Bifunctor, but this is required in practice.
 
-Although we won't elaborate here what exactly `into` and `next` do, and therefore how 'dissection' allows us to incrementally traverse a recursive structure, suffice to say that so long as for any (polynomial) type `F[_]` there exists a `Dissectable` instance, all recursion schemes can be used as they typically would.
+Although we won't elaborate here what exactly `into` and `next` do, and therefore how 'dissection' allows us to incrementally traverse a recursive structure, suffice to say that so long as for any (polynomial) type `F[_]` there exists a `Dissectable` instance, all recursion schemes can be used the same way as their directly-recursing versions.
 
 If `F[_]` is defined specifically in terms of Cats [polynomial functors](src/main/scala/polynomials/functors/package.scala) then an instance will be derived implicitly (see [givens](src/main/scala/Dissectable.scala))
 
