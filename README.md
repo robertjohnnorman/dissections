@@ -17,12 +17,12 @@ Nonetheless, for the brave, a stack-safe set of recursion-schemes can be importe
 If we use `cata` as an example scheme, we can compare the signatures between [this implementation](src/main/scala/schemes/Folds.scala) ... 
 
 ```scala
-def cata[F[_]: Functor, R, B](algebra: Algebra[F, B])(implicit project: Project[F, R]): R => B = ???
+def cata[F[_]: Dissectable, R, B](using project: Project[F, R])(algebra: Algebra[F, B]): R => B = ???
 ```
 ... and [the one in droste](https://github.com/higherkindness/droste/blob/193dff211372cad473efff0e1ee0d02a887bbf43/modules/core/src/main/scala/higherkindness/droste/scheme.scala#L55).
 
 ```scala
-def cata[F[_]: Dissectable, R, B](using project: Project[F, R])(algebra: Algebra[F, B]): R => B = ???
+def cata[F[_]: Functor, R, B](algebra: Algebra[F, B])(implicit project: Project[F, R]): R => B = ???
 ```
 
 Ignoring the re-ordering of argument clauses, they are identical except for the context-bound on `F[_]`, where we require a `Dissectable` type-class in-place of `Functor`.
